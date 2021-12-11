@@ -1,14 +1,12 @@
-#oogo#
-##introduction##
+# oogo
+## introduction##
 I will use this to refresh and deepen my understanding of go
-
-
-##Structure##
+## Structure
 
 - i am looking to keep to a minimal main func
 - vendor is the place to put in any 3rd party libraies and pin them to specif version - vendoring
 
-
+```
 ├── LICENSE
 ├── README.md
 ├── clientlib
@@ -28,7 +26,7 @@ I will use this to refresh and deepen my understanding of go
 │    ├── ooservice.go
 │    └── ooservice_test.go
 └── vendor
-
+'''
 
 
 i plan to cover topics such as:

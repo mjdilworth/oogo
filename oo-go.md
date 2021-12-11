@@ -7,19 +7,23 @@ Go does have built in concurrency and garbage collection.
 ## Go has Types
 Structs - user defined types with methods
 
+```
 Type Creature struct {
-Name string
-Real bool
+    Name string
+    Real bool
 }
 
 func (c Creature) Dump() {
   fmt.Printf("Name: '%s', Real: %t\n", c.Name, c.Real)
 }
+```
 ## Embedding
+```
 type FlyingCreature struct {
-Creature
-WingSpan int
+    Creature
+    WingSpan int
 }
+
 dragon := &FlyingCreature{
     Creature{"Dragon", false, },
     15,
@@ -27,11 +31,11 @@ dragon := &FlyingCreature{
 fmt.Println(dragon.Name)
 fmt.Println(dragon.Real)
 fmt.Println(dragon.WingSpan)
-
+```
 ## Interfaces
 Interfaces are types that declare sets of methods. Similarly to interfaces in other languages, they have no implementation.
 Typess that implement all the interface methods automatically implement the interface. There is no inheritance or subclassing or "implements" keyword. In the following code snippet, type Foo implements the Fooer interface (by convention, Go interface names end with "er").
-
+```
 type Fooer interface {
   Foo1()
   Foo2()
@@ -52,7 +56,7 @@ func (f Foo) Foo2() {
 func (f Foo) Foo3() {
     fmt.Println("Foo3() here")
 }
-
+```
 ## encapsulation, inheritance, and polymorphism
 
 ## Encapsulation
