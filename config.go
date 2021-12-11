@@ -1,5 +1,5 @@
-package oogo
+package main
 
 func Config() string {
-	return "oogo config"
+	return "running configurations"
 }
