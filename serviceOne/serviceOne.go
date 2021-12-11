@@ -1,5 +1,5 @@
-package servicelib
+package serviceOne
 
 func Hello() string {
-	return "server Hello"
+	return "serviceOne Hello"
 }
