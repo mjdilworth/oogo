@@ -12,21 +12,21 @@ I will use this to refresh and deepen my understanding of go
 ├── LICENSE
 ├── README.md
 ├── clientlib
-│   ├── ooclient.go
-│   └── ooclient_test.go
+│   ├── ooclient.go
+│   └── ooclient_test.go
 ├── cmd
-│   ├── oogo-client
-│   └── oogo-server
+│   ├── oogo-client
+│   └── oogo-server
 ├── config.go
 ├── config_test.go
 ├── go.mod
 ├── internal
-│   └── auth
-│       ├── auth.go
-│       └── auth_test.go
+│   └── auth
+│       ├── auth.go
+│       └── auth_test.go
 ├── servicelib
-│   ├── ooservice.go
-│   └── ooservice_test.go
+│    ├── ooservice.go
+│    └── ooservice_test.go
 └── vendor
 
 
