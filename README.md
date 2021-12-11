@@ -1,5 +1,5 @@
 # oogo
-## introduction##
+## introduction
 I will use this to refresh and deepen my understanding of go
 ## Structure
 
@@ -26,7 +26,7 @@ I will use this to refresh and deepen my understanding of go
 │    ├── ooservice.go
 │    └── ooservice_test.go
 └── vendor
-'''
+```
 
 
 i plan to cover topics such as:
