@@ -7,29 +7,40 @@ I will use this to refresh and deepen my understanding of go
 - vendor is the place to put in any 3rd party libraies and pin them to specif version - vendoring
 
 ```
+.
 ├── LICENSE
 ├── README.md
-├── clientlib
-│   ├── ooclient.go
-│   └── ooclient_test.go
 ├── cmd
-│   ├── oogo-client
-│   └── oogo-server
+│   └── oogo-client
+│       ├── main.go
+│       └── oogo-client
 ├── config.go
 ├── config_test.go
+├── design
+│   ├── architecture.md
+│   ├── oo-go.drawio
+│   ├── oo-go.md
+│   └── oo-go.svg
 ├── go.mod
 ├── internal
 │   └── auth
 │       ├── auth.go
 │       └── auth_test.go
-├── servicelib
-│    ├── ooservice.go
-│    └── ooservice_test.go
+├── main.go
+├── serviceOne
+│   ├── serviceOne.go
+│   └── serviceOne_test.go
+├── serviceThree
+│   ├── serviceThree.go
+│   └── serviceThree_test.go
+├── serviceTwo
+│   ├── serviceTwo.go
+│   └── serviceTwo_test.go
 └── vendor
 ```
 
 
-i plan to cover topics such as:
+cover topics such as:
 - modules
 - packages
 - vendoring
