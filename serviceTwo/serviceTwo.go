@@ -1,5 +1,5 @@
-package clientlib
+package servicetwo
 
 func Hello() string {
-	return "client Hello"
+	return "serviceTwo Hello"
 }

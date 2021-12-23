@@ -1,4 +1,4 @@
-package serviceThree
+package servicethree
 
 import "testing"
 
