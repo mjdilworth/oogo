@@ -4,6 +4,7 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -56,6 +57,16 @@ func newAPI() *http.ServeMux {
 			http.Error(w, "Unauthorized", http.StatusUnauthorized)
 		}
 	})
+	mux.HandleFunc("/roman/", func(w http.ResponseWriter, req *http.Request) {
+		if req.URL.Path != "/" {
+			http.NotFound(w, req)
+			return
+		}
+		strDec := romanTodecimal(req.URL.Path)
+		fmt.Fprintf(w, "Proudly served with Go and HTTPS!\n %q", strDec)
+		//fmt.Fprintf(w, strDec)
+
+	})
 
 	// register more routes over here...
 	return mux
@@ -68,6 +79,7 @@ func (srv *Server) Start() {
 	go func() {
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			fmt.Printf("Could not listen on %s\n", srv.Addr)
+			log.Printf("%+v", err)
 		}
 	}()
 	fmt.Println("Server is ready to handle requests")
@@ -81,6 +93,8 @@ func (srv *Server) StartTLS(certFile, keyFile string) {
 	go func() {
 		if err := srv.ListenAndServeTLS(certFile, keyFile); err != nil && err != http.ErrServerClosed {
 			fmt.Printf("Could not listen on %s\n", srv.Addr)
+			log.Printf("%+v", err)
+			os.Exit(-1)
 		}
 	}()
 	fmt.Println("Server is ready to handle requests")
